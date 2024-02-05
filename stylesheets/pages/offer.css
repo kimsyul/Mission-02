@@ -10,6 +10,16 @@ header {
     margin-bottom: 45px;
 }
 
+header h1 picture source {
+    width: 176px;
+    height: 40px;
+}
+
+header h1 picture img {
+    width: 176px;
+    height: 40px;
+}
+
 .title {
     background-image: url(/assets/icon/shopping.svg);
     background-repeat: no-repeat;
@@ -24,15 +34,124 @@ h2 {
 
 .content {
     display: flex;
-    border: 1px solid blue;
     justify-content: space-between;
 }
 
-div[class^="item"] {
+.item {
     width: 200px;
     height: 270px;
     background-color: var(--color-white);
-    border: 1px solid black;
+
+    position: relative;
 }
 
-.
+.item a {
+    display: flex;
+    flex-direction: column;
+}
+
+ul {
+    list-style: none;
+    padding: 0px;
+}
+
+.discount {
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    width: 53px;
+    height: 30px;
+    background-color: var(--color-red-500);
+ 
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 150%;
+    color: var(--color-white);
+
+    border-radius: 0 0 4px 0;
+}
+
+.item a>img{
+    width: 160px;
+    height: 160px;
+    margin: 14px auto 12px auto;
+}
+
+.item-text {
+    width: 172px;
+    height: 17px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 120%;
+    margin: 0 auto;
+
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.item-info {
+    width: 117px;
+    margin-left: 14px;
+    margin-top: 12px;
+}
+
+.item-info img {
+    width: 55px;
+    height: 16px;
+}
+
+.free {
+    color: var(--color-gray-700);
+    font-size: 14px;
+    line-height: 120%;
+    font-weight: 500;
+}
+
+.rate {
+    display: flex;
+    align-items: center;
+    margin-top: 6px;
+    position: relative;
+}
+
+.stars {
+    width: 68px;
+    height: 12px;
+    background-image: url(../../assets/sprites/rating-stars.png);
+}
+
+.s4 {
+    background-position-y: 80%;
+}
+
+.s4-5 {
+    background-position-y: 90%;
+}
+
+.s5 {
+    background-position-y: 100%;
+}
+
+.rate span {
+    font-size: 14px;
+    color: var(--color-gray-700);
+    font-weight: 400;
+    line-height: 120%;
+    margin-left: 4px;
+}
+
+.sr-only {
+    position: absolute;
+    z-index: -100;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.item:hover, .item:focus-within {
+    border: 1px solid var(--color-blue-700);
+}
